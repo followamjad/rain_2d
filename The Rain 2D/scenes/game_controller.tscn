@@ -120,7 +120,7 @@ grow_vertical = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Kingdom"
+text = "Build"
 
 [node name="advance_button" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(150, 100)
@@ -156,7 +156,7 @@ grow_vertical = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Law"
+text = "Kingdom"
 
 [node name="advance_button2" type="Button" parent="CanvasLayer"]
 custom_minimum_size = Vector2(150, 100)
@@ -197,7 +197,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Health : 100"
+text = "Wood : 100"
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/GridContainer"]
@@ -205,7 +205,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Hunger : 100"
+text = "People : 100"
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="CanvasLayer/GridContainer"]
@@ -213,7 +213,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Energy : 100"
+text = "Stone : 100"
 vertical_alignment = 1
 
 [node name="Label4" type="Label" parent="CanvasLayer/GridContainer"]
@@ -229,7 +229,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Fitness : 100"
+text = "Metal : 100"
 vertical_alignment = 1
 
 [node name="Label6" type="Label" parent="CanvasLayer/GridContainer"]
@@ -237,7 +237,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Sanity : 100"
+text = "Karma : 100"
 vertical_alignment = 1
 
 [node name="menu_controller" type="Control" parent="CanvasLayer"]
@@ -259,6 +259,7 @@ offset_bottom = 40.0
 
 [node name="menu_background2" type="TextureRect" parent="CanvasLayer/menu_controller/main_menu"]
 modulate = Color(0.192157, 0.192157, 0.192157, 0.341176)
+layout_mode = 0
 offset_left = -124.0
 offset_top = -114.0
 offset_right = 895.0
@@ -266,6 +267,7 @@ offset_bottom = 1468.0
 texture = ExtResource("3_7rtie")
 
 [node name="menu_background" type="TextureRect" parent="CanvasLayer/menu_controller/main_menu"]
+layout_mode = 0
 offset_left = 37.0
 offset_top = 52.0
 offset_right = 734.0
@@ -304,7 +306,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Open"
+text = "Trade"
 
 [node name="Button2" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
 custom_minimum_size = Vector2(300, 140)
@@ -312,7 +314,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Open"
+text = "Build"
 
 [node name="Button3" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
 custom_minimum_size = Vector2(300, 140)
@@ -320,7 +322,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Open"
+text = "Troops"
 
 [node name="Button4" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
 custom_minimum_size = Vector2(300, 140)
@@ -328,7 +330,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Open"
+text = "Other Kingdoms"
 
 [node name="Button5" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
 custom_minimum_size = Vector2(300, 140)
@@ -394,16 +396,18 @@ offset_bottom = 1300.0
 texture = ExtResource("3_7rtie")
 
 [node name="day_label" type="Label" parent="CanvasLayer/menu_controller/kingdom_menu"]
+layout_mode = 0
 offset_left = 58.0
 offset_top = 66.0
 offset_right = 234.0
 offset_bottom = 130.0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 64
-text = "Kingdom"
+text = "Buildings"
 
 [node name="close_crafting" type="Button" parent="CanvasLayer/menu_controller/kingdom_menu"]
 custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
 offset_left = 622.0
 offset_top = 51.0
 offset_right = 722.0
@@ -437,7 +441,7 @@ custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Sunda Empire"
+text = "Empty Building Slot"
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="CanvasLayer/menu_controller/kingdom_menu/ScrollContainer/VBoxContainer/foes_menu_1"]
@@ -446,7 +450,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Info"
+text = "Delete"
 
 [node name="Button2" type="Button" parent="CanvasLayer/menu_controller/kingdom_menu/ScrollContainer/VBoxContainer/foes_menu_1"]
 custom_minimum_size = Vector2(120, 0)
@@ -454,7 +458,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_6o1db")
 theme_override_font_sizes/font_size = 32
-text = "Trade"
+text = "Build"
 
 [node name="troops_menu" type="Control" parent="CanvasLayer/menu_controller"]
 anchors_preset = 0
@@ -464,6 +468,7 @@ offset_bottom = 40.0
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/menu_controller/troops_menu"]
 modulate = Color(0.192157, 0.192157, 0.192157, 0.341176)
+layout_mode = 0
 offset_left = -98.0
 offset_top = -278.0
 offset_right = 868.0
@@ -471,6 +476,7 @@ offset_bottom = 1361.0
 texture = ExtResource("3_7rtie")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/menu_controller/troops_menu"]
+layout_mode = 0
 offset_left = 28.0
 offset_top = 126.0
 offset_right = 742.0
@@ -478,6 +484,7 @@ offset_bottom = 957.0
 texture = ExtResource("3_7rtie")
 
 [node name="troops_label" type="Label" parent="CanvasLayer/menu_controller/troops_menu"]
+layout_mode = 0
 offset_left = 69.0
 offset_top = 156.0
 offset_right = 381.0
@@ -488,6 +495,7 @@ text = "Troops"
 
 [node name="close_troops" type="Button" parent="CanvasLayer/menu_controller/troops_menu"]
 custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
 offset_left = 627.0
 offset_top = 141.0
 offset_right = 727.0
@@ -498,6 +506,7 @@ theme_override_font_sizes/font_size = 32
 text = "Close"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/menu_controller/troops_menu"]
+layout_mode = 0
 offset_left = 69.0
 offset_top = 280.0
 offset_right = 705.0
