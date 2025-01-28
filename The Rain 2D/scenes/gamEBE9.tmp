@@ -1,0 +1,543 @@
+[gd_scene load_steps=6 format=3 uid="uid://wq3oxxs76jfs"]
+
+[ext_resource type="Script" path="res://scenes/game_controller.gd" id="1_tegu1"]
+[ext_resource type="FontFile" uid="uid://doueaoje5s4tr" path="res://font/Minecraft.ttf" id="2_6o1db"]
+[ext_resource type="Texture2D" uid="uid://cfm6q2881ytgx" path="res://art/background/status label bg.png" id="2_qi87t"]
+[ext_resource type="Texture2D" uid="uid://c7uapgtitewdg" path="res://art/background/menu bg.png" id="3_7rtie"]
+[ext_resource type="Script" path="res://scripts/menu_controller.gd" id="3_nv4w5"]
+
+[node name="game_controller" type="Node2D"]
+script = ExtResource("1_tegu1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="year_label" type="Label" parent="CanvasLayer"]
+offset_left = 40.0
+offset_top = 59.0
+offset_right = 160.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 64
+text = "STONE AGE"
+
+[node name="gold_label" type="Label" parent="CanvasLayer"]
+offset_left = 40.0
+offset_top = 143.0
+offset_right = 180.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 64
+text = "Gold : 100,000"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -333.0
+offset_top = -421.0
+offset_right = 335.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qi87t")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(650, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -410.0
+offset_right = 338.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="status_feed_container" type="VBoxContainer" parent="CanvasLayer/ScrollContainer"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="status_label" type="Label" parent="CanvasLayer/ScrollContainer/status_feed_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Day 1"
+autowrap_mode = 2
+
+[node name="status_label2" type="Label" parent="CanvasLayer/ScrollContainer/status_feed_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "News : \"Acid rain is pouring all over the city, Scientists expected the rain to last atleast 30 days.\""
+autowrap_mode = 2
+
+[node name="status_label3" type="Label" parent="CanvasLayer/ScrollContainer/status_feed_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "You are stuck in your house with a knife, 10 piece of wood, and 3 cans of tomato sauce"
+autowrap_mode = 2
+
+[node name="menu_button" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -185.0
+offset_top = 50.0
+offset_right = -35.0
+offset_bottom = 200.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Menu"
+
+[node name="crafting_button" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = 259.0
+offset_right = -9.0
+offset_bottom = 359.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Kingdom"
+
+[node name="advance_button" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.0
+offset_top = 259.0
+offset_right = -182.0
+offset_bottom = 359.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Advance"
+
+[node name="next_day_button2" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 185.0
+offset_top = 259.0
+offset_right = 335.0
+offset_bottom = 359.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Law"
+
+[node name="advance_button2" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(150, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 259.0
+offset_right = 166.0
+offset_bottom = 359.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Troops"
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = 403.0
+offset_right = 310.0
+offset_bottom = 617.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+columns = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Health : 100"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Hunger : 100"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Energy : 100"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Smart : 100"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Fitness : 100"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Sanity : 100"
+vertical_alignment = 1
+
+[node name="menu_controller" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -743.0
+offset_bottom = -1341.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_nv4w5")
+
+[node name="main_menu" type="Control" parent="CanvasLayer/menu_controller"]
+anchors_preset = 0
+offset_left = 927.0
+offset_right = 967.0
+offset_bottom = 40.0
+
+[node name="menu_background2" type="TextureRect" parent="CanvasLayer/menu_controller/main_menu"]
+modulate = Color(0.192157, 0.192157, 0.192157, 0.341176)
+offset_left = -124.0
+offset_top = -114.0
+offset_right = 895.0
+offset_bottom = 1468.0
+texture = ExtResource("3_7rtie")
+
+[node name="menu_background" type="TextureRect" parent="CanvasLayer/menu_controller/main_menu"]
+offset_left = 37.0
+offset_top = 52.0
+offset_right = 734.0
+offset_bottom = 1302.0
+texture = ExtResource("3_7rtie")
+
+[node name="close_main_menu" type="Button" parent="CanvasLayer/menu_controller/main_menu"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 625.0
+offset_top = 60.0
+offset_right = 725.0
+offset_bottom = 160.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Close"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/menu_controller/main_menu"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 182.0
+offset_right = 724.0
+offset_bottom = 1265.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="main_menu_button_container" type="VBoxContainer" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer"]
+custom_minimum_size = Vector2(666, 0)
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Button" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button2" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button3" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button4" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button5" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button6" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button7" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button8" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="Button9" type="Button" parent="CanvasLayer/menu_controller/main_menu/ScrollContainer/main_menu_button_container"]
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Open"
+
+[node name="crafting_menu" type="Control" parent="CanvasLayer/menu_controller"]
+anchors_preset = 0
+offset_left = -855.0
+offset_right = -815.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/menu_controller/crafting_menu"]
+modulate = Color(0.190762, 0.190762, 0.190762, 0.341176)
+layout_mode = 0
+offset_left = -55.0
+offset_top = -18.0
+offset_right = 825.0
+offset_bottom = 1358.0
+texture = ExtResource("3_7rtie")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/menu_controller/crafting_menu"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 40.0
+offset_right = 734.0
+offset_bottom = 1300.0
+texture = ExtResource("3_7rtie")
+
+[node name="day_label" type="Label" parent="CanvasLayer/menu_controller/crafting_menu"]
+offset_left = 58.0
+offset_top = 66.0
+offset_right = 234.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 64
+text = "Kingdom"
+
+[node name="close_crafting" type="Button" parent="CanvasLayer/menu_controller/crafting_menu"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 622.0
+offset_top = 51.0
+offset_right = 722.0
+offset_bottom = 151.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Close"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/menu_controller/crafting_menu"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 164.0
+offset_right = 705.0
+offset_bottom = 1254.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/menu_controller/crafting_menu/ScrollContainer"]
+custom_minimum_size = Vector2(630, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="foes_menu_1" type="HBoxContainer" parent="CanvasLayer/menu_controller/crafting_menu/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="CanvasLayer/menu_controller/crafting_menu/ScrollContainer/VBoxContainer/foes_menu_1"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Sunda Empire"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/menu_controller/crafting_menu/ScrollContainer/VBoxContainer/foes_menu_1"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Info"
+
+[node name="Button2" type="Button" parent="CanvasLayer/menu_controller/crafting_menu/ScrollContainer/VBoxContainer/foes_menu_1"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Trade"
+
+[node name="troops_menu" type="Control" parent="CanvasLayer/menu_controller"]
+anchors_preset = 0
+offset_left = -1645.0
+offset_right = -1605.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/menu_controller/troops_menu"]
+modulate = Color(0.192157, 0.192157, 0.192157, 0.341176)
+offset_left = -98.0
+offset_top = -278.0
+offset_right = 868.0
+offset_bottom = 1361.0
+texture = ExtResource("3_7rtie")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/menu_controller/troops_menu"]
+offset_left = 28.0
+offset_top = 126.0
+offset_right = 742.0
+offset_bottom = 957.0
+texture = ExtResource("3_7rtie")
+
+[node name="troops_label" type="Label" parent="CanvasLayer/menu_controller/troops_menu"]
+offset_left = 69.0
+offset_top = 156.0
+offset_right = 381.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 64
+text = "Inventory"
+
+[node name="close_troops" type="Button" parent="CanvasLayer/menu_controller/troops_menu"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 627.0
+offset_top = 141.0
+offset_right = 727.0
+offset_bottom = 241.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Close"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/menu_controller/troops_menu"]
+offset_left = 69.0
+offset_top = 280.0
+offset_right = 705.0
+offset_bottom = 905.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/menu_controller/troops_menu/ScrollContainer"]
+custom_minimum_size = Vector2(630, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="travel_menu_1" type="HBoxContainer" parent="CanvasLayer/menu_controller/troops_menu/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="CanvasLayer/menu_controller/troops_menu/ScrollContainer/VBoxContainer/travel_menu_1"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "10x wood"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/menu_controller/troops_menu/ScrollContainer/VBoxContainer/travel_menu_1"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Discard"
+
+[node name="Button2" type="Button" parent="CanvasLayer/menu_controller/troops_menu/ScrollContainer/VBoxContainer/travel_menu_1"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_6o1db")
+theme_override_font_sizes/font_size = 32
+text = "Discard"
+
+[connection signal="pressed" from="CanvasLayer/menu_button" to="CanvasLayer/menu_controller" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/crafting_button" to="CanvasLayer/menu_controller" method="_on_crafting_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/advance_button2" to="CanvasLayer/menu_controller" method="_on_advance_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/menu_controller/main_menu/close_main_menu" to="CanvasLayer/menu_controller" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/menu_controller/crafting_menu/close_crafting" to="CanvasLayer/menu_controller" method="_on_close_crafting_pressed"]
+[connection signal="pressed" from="CanvasLayer/menu_controller/troops_menu/close_troops" to="CanvasLayer/menu_controller" method="_on_close_travel_pressed"]

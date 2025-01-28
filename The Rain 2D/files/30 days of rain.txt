@@ -1,0 +1,27 @@
+30 days of rain
+
+24 hours a day
+8 hour of sleep
+can't go outside after 8pm
+
+100 energy
+24 hour a day
+1440 minutes
+
+eat = 20 mins -> + 10 energy
+sleep = 8 hours -> + 100 energy
+nap = 3 hours -> + 30 energy
+skip 1H doing nothing
+
+inventory size = 10 items?
+
+map:
+
+store
+hospital
+police station
+
+crafting:
+anti acid umbrella (one time use)
+
+what about money?
